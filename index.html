@@ -21,6 +21,12 @@
       padding-top: 4vh;
       padding-bottom: 4vw;
     }
+    .tabs .indicator{
+      background-color: #1a237e;
+    }
+    .tabs .tab a:focus, .tabs .tab a:focus.active{
+      background: transparent;
+    }
     @media screen and (max-width: 670px) {
       header{
         min-height: 500px;
@@ -90,13 +96,35 @@
     </div>
   </div>
   <!-- services / tabs -->
-  <div class="container">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, necessitatibus.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, necessitatibus.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, necessitatibus.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, necessitatibus.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, necessitatibus.</p>
-  </div>
+  <section class="container section" id="services">
+    <div class="row">
+      <div class="col s12 l4">
+        <h2 class="indigo-text text-darken-4">What I do...</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta unde atque quibusdam molestias mollitia ipsam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, aliquid? Placeat dignissimos nam molestiae id!</p>
+      </div>
+      <div class="col s12 l6 offset-l2">
+        <ul class="tabs">
+          <li class="tab col s6">
+            <a href="#photography" class="indigo-text text-darken-4">Photography</a>
+          </li>
+          <li class="tab col s6">
+            <a href="#editing" class="indigo-text text-darken-4">Editing</a>
+          </li>
+        </ul>
+        <div class="col s12" id="photography">
+          <p class="flow-text indigo-text text-darken-4">PHOTOGRAPHY</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id, quam.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos laboriosam tenetur exercitationem!</p>
+        </div>
+        <div class="col s12" id="editing">
+          <p class="flow-text indigo-text text-darken-4">EDITING</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, excepturi?</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non exercitationem dicta ab.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- parallax -->
   <div class="parallax-container">
@@ -122,6 +150,7 @@
       $(".sidenav").sidenav();
       $(".materialboxed").materialbox();
       $(".parallax").parallax();
+      $(".tabs").tabs();
     });
   </script>
 </body>
